@@ -14,7 +14,19 @@ const PortfolioModals = ({ togglers }) => {
                 return (
                     <div
                         className="portfolio-modal modal fade"
-                        id="portfolioModal1"
+                        id={
+                            index === 0
+                                ? "portfolioModal1"
+                                : index === 1
+                                ? "portfolioModal2"
+                                : index === 2
+                                ? "portfolioModal3"
+                                : index === 3
+                                ? "portfolioModal4"
+                                : index === 4
+                                ? "portfolioModal5"
+                                : "portfolioModal6"
+                        }
                         tabIndex="-1"
                         role="dialog"
                         aria-hidden="true"
@@ -56,17 +68,17 @@ const PortfolioModals = ({ togglers }) => {
                                                     }
                                                     alt="..."
                                                 />
-                                                <p>{togglers.text}</p>
+                                                <p>{toggler.text}</p>
                                                 <ul className="list-inline">
                                                     <li>
                                                         <strong>Client:</strong>
-                                                        {togglers.client}
+                                                        {toggler.client}
                                                     </li>
                                                     <li>
                                                         <strong>
                                                             Category:
                                                         </strong>
-                                                        {togglers.category}
+                                                        {toggler.category}
                                                     </li>
                                                 </ul>
                                                 <button

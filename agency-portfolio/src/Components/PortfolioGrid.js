@@ -26,7 +26,19 @@ const PortfolioGrid = ({ portfolioGrid }) => {
                                     <a
                                         className="portfolio-link"
                                         data-toggle="modal"
-                                        href={`#portfolioModal{index}`}
+                                        href={
+                                            index === 0
+                                                ? "#portfolioModal1"
+                                                : index === 1
+                                                ? "#portfolioModal2"
+                                                : index === 2
+                                                ? "#portfolioModal3"
+                                                : index === 3
+                                                ? "#portfolioModal4"
+                                                : index === 4
+                                                ? "#portfolioModal5"
+                                                : "#portfolioModal6"
+                                        }
                                     >
                                         <div className="portfolio-hover">
                                             <div className="portfolio-hover-content">
